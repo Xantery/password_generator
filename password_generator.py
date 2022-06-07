@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[254]:
+# In[3]:
 
 
 import random
@@ -32,8 +32,30 @@ if user == 'weak':
         password.append(number)
     print(''.join(password))
 
+    
+
+
+# In[4]:
+
+
+s = "abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?"
+passlen = 8
+p =  "".join(random.sample(s,passlen ))
+print(p)
+
 
 # # 
+
+# In[6]:
+
+
+import string
+
+def pw_gen(size = 8, chars=string.ascii_letters + string.digits + string.punctuation):
+    return ''.join(random.choice(chars) for _ in range(size))
+
+print(pw_gen(int(input('How many characters in your password?'))))
+
 
 # In[ ]:
 
